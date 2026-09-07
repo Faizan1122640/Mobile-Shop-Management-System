@@ -9,14 +9,14 @@
       "entrypoint": "src/server.js"
     }
   },
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "backend"
+      "source": "/api/:path*",
+      "service": "backend"
     },
     {
-      "src": "/(.*)",
-      "dest": "frontend"
+      "source": "/:path*",
+      "service": "frontend"
     }
   ]
 }
