@@ -8,15 +8,5 @@
       "root": "backend",
       "entrypoint": "src/server.js"
     }
-  },
-  "rewrites": [
-    {
-      "source": "/api/:path*",
-      "service": "backend"
-    },
-    {
-      "source": "/:path*",
-      "service": "frontend"
-    }
-  ]
+  }
 }
