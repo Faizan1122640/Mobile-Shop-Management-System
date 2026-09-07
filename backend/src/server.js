@@ -67,13 +67,12 @@ app.all('*', (req, res, next) => {
 // 8. Centralized Global Error Handler Middleware
 app.use(errorHandler);
 
-if (!process.env.VERCEL) {
-  app.listen(PORT, () => {
-    console.log(`🚀 Chaudhry Mobile Shop Backend running on http://localhost:${PORT}`);
-    console.log(`📊 API endpoints available at http://localhost:${PORT}/api`);
-    console.log(`👥 CRM Customer endpoints available at http://localhost:${PORT}/api/crm/customers`);
-  });
-}
+app.listen(PORT, () => {
+  console.log(`🚀 Chaudhry Mobile Shop Backend running on port ${PORT}`);
+  console.log(`📊 API endpoints available at /api`);
+  console.log(`👥 CRM Customer endpoints available at /api/crm/customers`);
+});
+
 
 export default app;
 
